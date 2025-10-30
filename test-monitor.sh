@@ -43,7 +43,7 @@ monitor_test() {
 
     # Make POST request to API
     local HTTP_CODE
-    HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -X POST "$API_URL"  --connect-timeout 5 --max-time 10 || echo "000")
+    HTTP_CODE=$(curl -Ls --proto =https --proto-redir =https -o /dev/null -w "%{http_code}" -X POST "$API_URL"  --connect-timeout 5 --max-time 10 || echo "000")
 
     # If API not responding or error
     if [[ "$HTTP_CODE" -ge 400 || "$HTTP_CODE" -eq 000 ]]; then
