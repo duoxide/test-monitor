@@ -1,0 +1,11 @@
+[Unit]
+Description=Run test-monitor.service every minute and at boot
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1min
+Persistent=true
+Unit=test-monitor.service
+
+[Install]
+WantedBy=timers.target

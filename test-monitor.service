@@ -1,0 +1,10 @@
+[Unit]
+Description=Monitor 'test' process and report to API
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/test-monitor
+ExecStart=%h/test-monitor/test-monitor.sh
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
