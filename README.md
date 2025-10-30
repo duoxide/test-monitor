@@ -55,7 +55,7 @@ sudo chmod 770 /var/log/test-monitoring
 systemctl --user daemon-reload
 ```
 
-Не обязательно
+<u>Не обязательно</u>
 
 9. Перейти в директорию test-process
 ```bash
